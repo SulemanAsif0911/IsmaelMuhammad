@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f5efce;
+  --color-gold-200: #ebde9a;
+  --color-gold-300: #dfc763;
+  --color-gold-400: #d4b037;
+  --color-gold-500: #c59b27;
+  --color-gold-600: #aa7a1e;
+  --color-gold-700: #875a1b;
+
+  --color-forest-950: #040b07;
+  --color-forest-900: #07130d;
+  --color-forest-800: #0d1e15;
+  --color-forest-700: #152b20;
+  --color-forest-600: #1e3c2c;
+  --color-forest-500: #2c533e;
+
+  --color-ocean-950: #020d14;
+  --color-ocean-900: #041824;
+  --color-ocean-800: #08283d;
+  --color-ocean-700: #0b3d5b;
+  --color-ocean-600: #0f5882;
+  --color-ocean-500: #1476ad;
+
+  --color-sand-100: #f5f3ec;
+  --color-sand-200: #e8e4d5;
+  --color-sand-300: #d7d0ba;
+  --color-sand-400: #c3ba9d;
+  --color-sand-500: #ada182;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #050807;
+  color: #e8e4d9;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(212, 176, 55, 0.35);
+  color: #f5efce;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040b07;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3c2c;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b037;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 15px rgba(212, 176, 55, 0.25));
+  }
+  50% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 35px rgba(212, 176, 55, 0.65));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3.5s ease-in-out infinite;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
