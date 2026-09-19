@@ -1,0 +1,37 @@
+{
+  "name": "ismaelmuhammad",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This project is a complete ground-up redesign of the **Ismaeel Muhammad** perfume e-commerce website.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SulemanAsif0911/IsmaelMuhammad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SulemanAsif0911/IsmaelMuhammad/issues"
+  },
+  "homepage": "https://github.com/SulemanAsif0911/IsmaelMuhammad#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.47.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
