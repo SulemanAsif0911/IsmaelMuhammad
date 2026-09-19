@@ -4,7 +4,7 @@ import { useShop } from '../context/ShopContext';
 import { ParticleCanvas } from '../components/ParticleCanvas';
 
 export const HeroOpening = ({ onScrollDown }) => {
-  const { navigateTo, setQuickViewProduct, products } = useShop();
+  const { navigateTo, setQuickViewProduct, setIsScentFinderOpen, products } = useShop();
   const heroProduct = products.find((p) => p.id === 'ambre-noble') || products[0];
 
   // Mouse Parallax for pseudo-3D layered depth
@@ -124,13 +124,21 @@ export const HeroOpening = ({ onScrollDown }) => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="pt-4 flex items-center gap-4">
+          <div className="pt-4 flex flex-wrap items-center gap-3 sm:gap-4">
             <button
               onClick={() => onScrollDown()}
               className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#d4af37] via-[#ebd57b] to-[#c99a2c] text-black font-semibold text-xs tracking-[0.2em] uppercase shadow-2xl hover:shadow-[#d4af37]/40 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
             >
               <span>EXPLORE FRAGRANCE</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+
+            <button
+              onClick={() => setIsScentFinderOpen(true)}
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/5 hover:bg-[#d4af37]/15 border border-[#d4af37]/40 text-[#f5e6b3] text-xs tracking-widest uppercase transition-all duration-300 backdrop-blur-md"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+              <span>Scent Match</span>
             </button>
 
             <button

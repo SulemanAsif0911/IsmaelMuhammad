@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ShoppingBag, User, Menu, X, Sparkles, ChevronDown } from 'lucide-react';
+import { Search, ShoppingBag, User, Menu, X, Sparkles, ChevronDown, Heart, Compass } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { AudioPlayer } from './AudioPlayer';
 
@@ -10,6 +10,9 @@ export const Navbar = () => {
     cartCount,
     setIsCartOpen,
     setIsSearchOpen,
+    setIsScentFinderOpen,
+    wishlist,
+    setIsWishlistOpen,
     currency,
     setCurrency,
   } = useShop();
@@ -95,9 +98,19 @@ export const Navbar = () => {
           </nav>
 
           {/* Right Action Icons */}
-          <div className="flex items-center space-x-3 sm:space-x-5">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             {/* Audio Ambience Toggle */}
             <AudioPlayer />
+
+            {/* Scent Quiz Button */}
+            <button
+              onClick={() => setIsScentFinderOpen(true)}
+              className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-mono uppercase tracking-widest bg-white/5 hover:bg-[#d4af37]/15 border border-white/10 hover:border-[#d4af37]/40 text-white/80 hover:text-[#f5e6b3] transition-all"
+              title="Find Your Signature Scent"
+            >
+              <Compass className="w-3.5 h-3.5 text-[#d4af37]" />
+              <span>Scent Match</span>
+            </button>
 
             {/* Currency Switcher */}
             <div className="relative">
@@ -147,6 +160,21 @@ export const Navbar = () => {
               title="Search scents & notes"
             >
               <Search className="w-4 h-4" />
+            </button>
+
+            {/* Wishlist Trigger */}
+            <button
+              onClick={() => setIsWishlistOpen(true)}
+              className="relative p-1.5 text-white/70 hover:text-white transition-colors hover:scale-110 active:scale-95"
+              aria-label="Saved Fragrances"
+              title="Your Wishlist"
+            >
+              <Heart className="w-4 h-4" />
+              {wishlist.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold font-mono w-3.5 h-3.5 rounded-full flex items-center justify-center shadow-lg">
+                  {wishlist.length}
+                </span>
+              )}
             </button>
 
             {/* Cart Trigger */}

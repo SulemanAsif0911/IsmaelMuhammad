@@ -5,6 +5,8 @@ import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
 import { SearchModal } from './components/SearchModal';
 import { QuickViewModal } from './components/QuickViewModal';
+import { ScentFinderModal } from './components/ScentFinderModal';
+import { WishlistDrawer } from './components/WishlistDrawer';
 import { HomePage } from './pages/HomePage';
 import { ShopPage } from './pages/ShopPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
@@ -14,7 +16,13 @@ import { ContactPage } from './pages/ContactPage';
 import { CheckoutPage } from './pages/CheckoutPage';
 
 export const App = () => {
-  const { currentPage } = useShop();
+  const {
+    currentPage,
+    isScentFinderOpen,
+    setIsScentFinderOpen,
+    isWishlistOpen,
+    setIsWishlistOpen,
+  } = useShop();
 
   const renderPage = () => {
     switch (currentPage) {
@@ -51,6 +59,14 @@ export const App = () => {
       <CartDrawer />
       <SearchModal />
       <QuickViewModal />
+      <ScentFinderModal
+        isOpen={isScentFinderOpen}
+        onClose={() => setIsScentFinderOpen(false)}
+      />
+      <WishlistDrawer
+        isOpen={isWishlistOpen}
+        onClose={() => setIsWishlistOpen(false)}
+      />
 
       {/* Global Footer (shown on all pages except checkout) */}
       {currentPage !== 'checkout' && <Footer />}

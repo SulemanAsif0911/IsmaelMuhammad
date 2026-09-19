@@ -21,7 +21,9 @@ export const ShopProvider = ({ children }) => {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [wishlist, setWishlist] = useState([]);
+  const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScentFinderOpen, setIsScentFinderOpen] = useState(false);
   const [quickViewProduct, setQuickViewProduct] = useState(null);
   
   // Currency: PKR or USD
@@ -154,9 +156,13 @@ export const ShopProvider = ({ children }) => {
         shippingFee,
         freeShippingThreshold,
         wishlist,
+        isWishlistOpen,
+        setIsWishlistOpen,
         toggleWishlist,
         isSearchOpen,
         setIsSearchOpen,
+        isScentFinderOpen,
+        setIsScentFinderOpen,
         quickViewProduct,
         setQuickViewProduct,
         currency,
