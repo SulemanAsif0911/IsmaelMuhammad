@@ -56,72 +56,77 @@
   <a class="rail__item active" data-rail="01" href="#hero"><span>The Awakening</span></a>
   <a class="rail__item" data-rail="02" href="#forest"><span>The Forest</span></a>
   <a class="rail__item" data-rail="03" href="#transition"><span>The Shore</span></a>
-  <a class="rail__item" data-rail="04" href="#ocean"><span>The Sea Bed</span></a>
+  <a class="rail__item" data-rail="04" href="#ocean"><span>The Ocean</span></a>
   <a class="rail__item" data-rail="05" href="#mostwanted"><span>The Depths</span></a>
   <a class="rail__item" data-rail="06" href="#collections"><span>Collections</span></a>
 </div>
 
 <main class="journey">
 
-  <!-- ================================================
-       SCENE 01 — THE FOREST / THE SCENT AWAKENS
-       ================================================ -->
-  <section class="scene" id="hero" data-rail="01" aria-label="The awakening">
-    <div class="stage">
-      <div class="layer hero-bg"><img src="assets/img/env/forest-bg.webp" alt="A dark cinematic forest at dawn"></div>
-      <div class="fog" aria-hidden="true"></div>
-      <div class="sunshaft" aria-hidden="true"></div>
-      <div class="layer hero-mid" aria-hidden="true"><img src="assets/img/env/model-mid.webp" alt=""></div>
-
-      <div class="leaf leaf--far" aria-hidden="true"><img src="assets/img/env/leaf-far.webp" alt=""></div>
-
-      <a class="hero-bottle" href="product.html?p=five-nine" aria-label="Discover Five-Nine, our woody amber spicy eau de parfum">
-        <div class="hero-bottle-in">
-          <span class="halo" aria-hidden="true"></span>
-          <img src="assets/img/bottles/five-nine.webp" alt="Five-Nine — amber glass perfume bottle with gold cap">
-        </div>
-      </a>
-
-      <div class="leaf leaf--l" aria-hidden="true"><img src="assets/img/env/leaf-left.webp" alt=""></div>
-      <div class="leaf leaf--r" aria-hidden="true"><img src="assets/img/env/leaf-right.webp" alt=""></div>
-      <div class="leaf leaf--b" aria-hidden="true"><img src="assets/img/env/leaf-bottom.webp" alt=""></div>
-      <canvas class="p-canvas" aria-hidden="true"></canvas>
-      <div class="vignette" aria-hidden="true"></div>
-
-      <div class="hero-copy">
-        <span class="eyebrow">Ismaeel Muhammad — Eau de Parfum</span>
-        <h1 class="display">More than<br>a scent.</h1>
-        <div class="journeysub">A journey of senses.</div>
-        <p class="body-l">Crafted for those who seek more — timeless fragrances inspired by nature, heritage and emotion.</p>
-        <a class="btn" href="#forest">Explore fragrance <span class="arr">→</span></a>
-      </div>
-
-      <div class="hero-foot">
-        <div class="scrollcue"><span class="line"></span> Scroll to enter</div>
-        <div>01 / 06</div>
-      </div>
+  <!-- ============================================================
+       FOREST REALM: UNIFIED COMMON BACKGROUND
+       Rock-solid continuous forest background between Awakening & Forest
+       ============================================================ -->
+  <div class="forest-realm" id="forest-realm">
+    <div class="forest-realm__bg" aria-hidden="true">
+      <div class="layer common-forest-bg"><img src="assets/img/env/forest-bg.webp" alt="A dark cinematic forest at dawn"></div>
+      <div class="fog"></div>
+      <div class="sunshaft"></div>
     </div>
-  </section>
 
-  <!-- ================================================
-       SCENE 02 — THE FOREST EXPERIENCE
-       ================================================ -->
-  <section class="scene" id="forest" data-rail="02" aria-label="The forest collection">
-    <div class="stage">
-      <div class="layer forest-bg"><img src="assets/img/env/forest-bg.webp" alt="Deep forest environment"></div>
-      <div class="forest-frame" aria-hidden="true">
-        <div class="layer ff-mid"><img src="assets/img/env/model-mid.webp" alt=""></div>
-        <div class="leaf leaf--far ff-far"><img src="assets/img/env/leaf-far.webp" alt=""></div>
-        <div class="leaf leaf--l ff-l"><img src="assets/img/env/leaf-left.webp" alt=""></div>
-        <div class="leaf leaf--r ff-r"><img src="assets/img/env/leaf-right.webp" alt=""></div>
-        <div class="leaf leaf--b ff-b"><img src="assets/img/env/leaf-bottom.webp" alt=""></div>
-        <div class="fog"></div>
-        <div class="sunshaft"></div>
+    <!-- ================================================
+         SCENE 01 — THE FOREST / THE SCENT AWAKENS
+         ================================================ -->
+    <section class="scene" id="hero" data-rail="01" aria-label="The awakening">
+      <div class="stage">
+        <div class="layer hero-mid" aria-hidden="true"><img src="assets/img/env/model-mid.webp" alt=""></div>
+
+        <div class="leaf leaf--far" aria-hidden="true"><img src="assets/img/env/leaf-far.webp" alt=""></div>
+
+        <a class="hero-bottle" href="product.html?p=five-nine" aria-label="Discover Five-Nine, our woody amber spicy eau de parfum">
+          <div class="hero-bottle-in">
+            <span class="halo" aria-hidden="true"></span>
+            <img src="assets/img/bottles/five-nine.webp" alt="Five-Nine — amber glass perfume bottle with gold cap">
+          </div>
+        </a>
+
+        <div class="leaf leaf--l" aria-hidden="true"><img src="assets/img/env/leaf-left.webp" alt=""></div>
+        <div class="leaf leaf--r" aria-hidden="true"><img src="assets/img/env/leaf-right.webp" alt=""></div>
+        <div class="leaf leaf--b" aria-hidden="true"><img src="assets/img/env/leaf-bottom.webp" alt=""></div>
+        <canvas class="p-canvas" aria-hidden="true"></canvas>
+        <div class="vignette" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <span class="eyebrow">Ismaeel Muhammad — Eau de Parfum</span>
+          <h1 class="display">More than<br>a scent.</h1>
+          <div class="journeysub">A journey of senses.</div>
+          <p class="body-l">Crafted for those who seek more — timeless fragrances inspired by nature, heritage and emotion.</p>
+          <a class="btn" href="#forest">Explore fragrance <span class="arr">→</span></a>
+        </div>
+
+        <div class="hero-foot">
+          <div class="scrollcue"><span class="line"></span> Scroll to enter</div>
+          <div>01 / 06</div>
+        </div>
       </div>
-      <div class="vignette" aria-hidden="true"></div>
-      <div class="stagechip stagechip--hero"><b>02</b> The Forest</div>
+    </section>
 
-      <div class="beats">
+    <!-- ================================================
+         SCENE 02 — THE FOREST EXPERIENCE
+         ================================================ -->
+    <section class="scene" id="forest" data-rail="02" aria-label="The forest collection">
+      <div class="stage">
+        <div class="forest-frame" aria-hidden="true">
+          <div class="layer ff-mid"><img src="assets/img/env/model-mid.webp" alt=""></div>
+          <div class="leaf leaf--far ff-far"><img src="assets/img/env/leaf-far.webp" alt=""></div>
+          <div class="leaf leaf--l ff-l"><img src="assets/img/env/leaf-left.webp" alt=""></div>
+          <div class="leaf leaf--r ff-r"><img src="assets/img/env/leaf-right.webp" alt=""></div>
+          <div class="leaf leaf--b ff-b"><img src="assets/img/env/leaf-bottom.webp" alt=""></div>
+        </div>
+        <div class="vignette" aria-hidden="true"></div>
+        <div class="stagechip stagechip--hero"><b>02</b> The Forest</div>
+
+        <div class="beats">
 
         <article class="beat" data-product="five-nine">
           <div class="beat__botanical" aria-hidden="true"><img src="assets/img/env/model-fore.webp" alt=""></div>
@@ -218,21 +223,29 @@
       </div>
     </div>
   </section>
+  </div><!-- /.forest-realm -->
 
   <!-- ================================================
-       SCENE 03 — TRANSITION / FOREST → OPEN LAND → WATER
+       SCENE 03 — TRANSITION / FOREST → OPEN LAND → OCEAN
        ================================================ -->
-  <section class="scene" id="transition" data-rail="03" aria-label="From forest to the shore, then under the water">
+  <section class="scene" id="transition" data-rail="03" aria-label="From forest to the shore, then diving into the ocean">
     <div class="stage">
+      <!-- Layer 3: Seashore background (beach.webp) -->
       <div class="layer trans-beach"><img src="assets/img/env/beach.webp" alt="Bright sky and warm sand at the shore"></div>
+
+      <!-- Layer 2: Ocean sea water rising in between leaves and beach -->
       <div class="water-rise" aria-hidden="true">
         <div class="water-fill"><img src="assets/img/env/ocean-surface.webp" alt=""></div>
       </div>
+
       <div class="trans-wash" aria-hidden="true"></div>
+
+      <!-- Layer 1: Mi Amor models (bushes + leaves) overlay on top of the whole shore -->
       <div class="shore-overlay" aria-hidden="true">
         <div class="bushes"><img src="assets/img/env/model-mid.webp" alt=""></div>
         <div class="leaves"><img src="assets/img/env/leaf-near.webp" alt=""></div>
       </div>
+
       <div class="vignette trans-vignette" aria-hidden="true"></div>
       <div class="stagechip"><b>03</b> The Shore</div>
 
@@ -246,7 +259,7 @@
           <h2 class="display">Sky, sand<br>and stillness.</h2>
         </div>
         <div class="trans-steps" aria-hidden="true">
-          <span class="on">Land</span><i></i><span>Shore</span><i></i><span>Water</span>
+          <span class="on">Land</span><i></i><span>Shore</span><i></i><span>Ocean</span>
         </div>
       </div>
     </div>
@@ -265,10 +278,10 @@
       <div class="ocean-veil" aria-hidden="true"></div>
       <canvas class="p-canvas" aria-hidden="true"></canvas>
       <div class="vignette" aria-hidden="true"></div>
-      <div class="stagechip"><b>04</b> The Sea Bed</div>
+      <div class="stagechip"><b>04</b> The Ocean</div>
 
       <div class="ocean-head">
-        <h2 class="display">Down to the sea bed.</h2>
+        <h2 class="display">Down to the ocean bed.</h2>
         <div class="sub">Deeper you go, rarer it becomes</div>
       </div>
 
